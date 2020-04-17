@@ -1,0 +1,136 @@
+2020-04-17 09:41:25.754 [INFO] [restartedMain] [com.miracle.TestplatformApplication:55] - Starting TestplatformApplication on PC-20190107VPUU with PID 10880 (E:\Code\testplatform\target\classes started by Administrator in E:\Code\testplatform) 
+2020-04-17 09:41:25.754 [INFO] [restartedMain] [com.miracle.TestplatformApplication:651] - No active profile set, falling back to default profiles: default 
+2020-04-17 09:41:26.006 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:92] - Tomcat initialized with port(s): 8080 (http) 
+2020-04-17 09:41:26.006 [INFO] [restartedMain] [org.apache.catalina.core.StandardService:173] - Starting service [Tomcat] 
+2020-04-17 09:41:26.007 [INFO] [restartedMain] [org.apache.catalina.core.StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.33] 
+2020-04-17 09:41:26.026 [INFO] [restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] - Initializing Spring embedded WebApplicationContext 
+2020-04-17 09:41:26.026 [INFO] [restartedMain] [org.springframework.web.context.ContextLoader:284] - Root WebApplicationContext: initialization completed in 270 ms 
+2020-04-17 09:41:26.131 [INFO] [restartedMain] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-04-17 09:41:26.182 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:58] - LiveReload server is running on port 35729 
+2020-04-17 09:41:26.197 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 8080 (http) with context path '' 
+2020-04-17 09:41:26.198 [INFO] [restartedMain] [com.miracle.TestplatformApplication:61] - Started TestplatformApplication in 0.466 seconds (JVM running for 189.97) 
+2020-04-17 09:41:26.199 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged 
+2020-04-17 09:41:44.148 [INFO] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020-04-17 09:41:44.149 [INFO] [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet' 
+2020-04-17 09:41:44.152 [INFO] [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] - Completed initialization in 3 ms 
+2020-04-17 09:41:44.153 [INFO] [http-nio-8080-exec-1] [com.miracle.filter.WebConfiguration:52] - 请求URL:/test/getAllTest 
+2020-04-17 09:41:44.154 [INFO] [http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource:110] - HikariPool-4 - Starting... 
+2020-04-17 09:41:44.158 [INFO] [http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource:123] - HikariPool-4 - Start completed. 
+2020-04-17 09:43:11.799 [INFO] [Thread-28] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-04-17 09:43:11.800 [INFO] [Thread-28] [com.zaxxer.hikari.HikariDataSource:350] - HikariPool-4 - Shutdown initiated... 
+2020-04-17 09:43:11.804 [INFO] [Thread-28] [com.zaxxer.hikari.HikariDataSource:352] - HikariPool-4 - Shutdown completed. 
+2020-04-17 09:43:11.992 [INFO] [restartedMain] [com.miracle.TestplatformApplication:55] - Starting TestplatformApplication on PC-20190107VPUU with PID 10880 (E:\Code\testplatform\target\classes started by Administrator in E:\Code\testplatform) 
+2020-04-17 09:43:11.993 [INFO] [restartedMain] [com.miracle.TestplatformApplication:651] - No active profile set, falling back to default profiles: default 
+2020-04-17 09:43:12.231 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:92] - Tomcat initialized with port(s): 8080 (http) 
+2020-04-17 09:43:12.231 [INFO] [restartedMain] [org.apache.catalina.core.StandardService:173] - Starting service [Tomcat] 
+2020-04-17 09:43:12.232 [INFO] [restartedMain] [org.apache.catalina.core.StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.33] 
+2020-04-17 09:43:12.248 [INFO] [restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] - Initializing Spring embedded WebApplicationContext 
+2020-04-17 09:43:12.248 [INFO] [restartedMain] [org.springframework.web.context.ContextLoader:284] - Root WebApplicationContext: initialization completed in 252 ms 
+2020-04-17 09:43:12.344 [INFO] [restartedMain] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-04-17 09:43:12.396 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:58] - LiveReload server is running on port 35729 
+2020-04-17 09:43:12.414 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 8080 (http) with context path '' 
+2020-04-17 09:43:12.414 [INFO] [restartedMain] [com.miracle.TestplatformApplication:61] - Started TestplatformApplication in 0.445 seconds (JVM running for 296.186) 
+2020-04-17 09:43:12.416 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged 
+2020-04-17 09:43:30.807 [INFO] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020-04-17 09:43:30.807 [INFO] [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet' 
+2020-04-17 09:43:30.811 [INFO] [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] - Completed initialization in 3 ms 
+2020-04-17 09:43:30.812 [INFO] [http-nio-8080-exec-1] [com.miracle.filter.WebConfiguration:52] - 请求URL:/test/getAllTest 
+2020-04-17 09:44:15.845 [INFO] [http-nio-8080-exec-3] [com.miracle.filter.WebConfiguration:52] - 请求URL:/test/getAllTest 
+2020-04-17 09:46:20.900 [INFO] [restartedMain] [com.miracle.TestplatformApplication:55] - Starting TestplatformApplication on PC-20190107VPUU with PID 9100 (E:\Code\testplatform\target\classes started by Administrator in E:\Code\testplatform) 
+2020-04-17 09:46:20.904 [INFO] [restartedMain] [com.miracle.TestplatformApplication:651] - No active profile set, falling back to default profiles: default 
+2020-04-17 09:46:23.224 [INFO] [restartedMain] [com.miracle.TestplatformApplication:61] - Started TestplatformApplication in 2.693 seconds (JVM running for 3.352) 
+2020-04-17 09:46:36.103 [INFO] [http-nio-8080-exec-1] [com.miracle.filter.WebConfiguration:52] - 请求URL:/test/getAllTest 
+2020-04-17 09:46:49.945 [INFO] [restartedMain] [com.miracle.TestplatformApplication:55] - Starting TestplatformApplication on PC-20190107VPUU with PID 9100 (E:\Code\testplatform\target\classes started by Administrator in E:\Code\testplatform) 
+2020-04-17 09:46:49.945 [INFO] [restartedMain] [com.miracle.TestplatformApplication:651] - No active profile set, falling back to default profiles: default 
+2020-04-17 09:46:50.228 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:92] - Tomcat initialized with port(s): 8080 (http) 
+2020-04-17 09:46:50.230 [INFO] [restartedMain] [org.apache.catalina.core.StandardService:173] - Starting service [Tomcat] 
+2020-04-17 09:46:50.231 [INFO] [restartedMain] [org.apache.catalina.core.StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.33] 
+2020-04-17 09:46:50.252 [INFO] [restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] - Initializing Spring embedded WebApplicationContext 
+2020-04-17 09:46:50.252 [INFO] [restartedMain] [org.springframework.web.context.ContextLoader:284] - Root WebApplicationContext: initialization completed in 304 ms 
+2020-04-17 09:46:50.391 [INFO] [restartedMain] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-04-17 09:46:50.457 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:58] - LiveReload server is running on port 35729 
+2020-04-17 09:46:50.474 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 8080 (http) with context path '' 
+2020-04-17 09:46:50.475 [INFO] [restartedMain] [com.miracle.TestplatformApplication:61] - Started TestplatformApplication in 0.56 seconds (JVM running for 30.602) 
+2020-04-17 09:46:50.477 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged 
+2020-04-17 09:47:06.742 [INFO] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020-04-17 09:47:06.743 [INFO] [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet' 
+2020-04-17 09:47:06.749 [INFO] [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] - Completed initialization in 6 ms 
+2020-04-17 09:47:06.750 [INFO] [http-nio-8080-exec-1] [com.miracle.filter.WebConfiguration:52] - 请求URL:/test/getAllTest 
+2020-04-17 09:47:06.752 [INFO] [http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource:110] - HikariPool-2 - Starting... 
+2020-04-17 09:47:06.758 [INFO] [http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource:123] - HikariPool-2 - Start completed. 
+2020-04-17 09:47:33.946 [INFO] [Thread-18] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-04-17 09:47:33.947 [INFO] [Thread-18] [com.zaxxer.hikari.HikariDataSource:350] - HikariPool-2 - Shutdown initiated... 
+2020-04-17 09:47:33.953 [INFO] [Thread-18] [com.zaxxer.hikari.HikariDataSource:352] - HikariPool-2 - Shutdown completed. 
+2020-04-17 09:47:34.298 [INFO] [restartedMain] [com.miracle.TestplatformApplication:55] - Starting TestplatformApplication on PC-20190107VPUU with PID 9100 (E:\Code\testplatform\target\classes started by Administrator in E:\Code\testplatform) 
+2020-04-17 09:47:34.299 [INFO] [restartedMain] [com.miracle.TestplatformApplication:651] - No active profile set, falling back to default profiles: default 
+2020-04-17 09:47:34.545 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:92] - Tomcat initialized with port(s): 8080 (http) 
+2020-04-17 09:47:34.546 [INFO] [restartedMain] [org.apache.catalina.core.StandardService:173] - Starting service [Tomcat] 
+2020-04-17 09:47:34.547 [INFO] [restartedMain] [org.apache.catalina.core.StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.33] 
+2020-04-17 09:47:34.570 [INFO] [restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] - Initializing Spring embedded WebApplicationContext 
+2020-04-17 09:47:34.571 [INFO] [restartedMain] [org.springframework.web.context.ContextLoader:284] - Root WebApplicationContext: initialization completed in 268 ms 
+2020-04-17 09:47:34.677 [INFO] [restartedMain] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:181] - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-04-17 09:47:34.728 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:58] - LiveReload server is running on port 35729 
+2020-04-17 09:47:34.742 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 8080 (http) with context path '' 
+2020-04-17 09:47:34.743 [INFO] [restartedMain] [com.miracle.TestplatformApplication:61] - Started TestplatformApplication in 0.471 seconds (JVM running for 74.87) 
+2020-04-17 09:47:34.744 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:63] - Condition evaluation unchanged 
+2020-04-17 09:47:41.233 [INFO] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020-04-17 09:47:41.234 [INFO] [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet' 
+2020-04-17 09:47:41.246 [INFO] [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] - Completed initialization in 12 ms 
+2020-04-17 09:47:41.247 [INFO] [http-nio-8080-exec-1] [com.miracle.filter.WebConfiguration:52] - 请求URL:/test/getAllTest 
+2020-04-17 09:47:57.121 [INFO] [http-nio-8080-exec-3] [com.miracle.filter.WebConfiguration:52] - 请求URL:/test/getTestById 
+2020-04-17 09:57:30.411 [INFO] [Thread-23] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:218] - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-04-17 09:57:30.748 [INFO] [restartedMain] [com.miracle.TestplatformApplication-55] - Starting TestplatformApplication on PC-20190107VPUU with PID 9100 (E:\Code\testplatform\target\classes started by Administrator in E:\Code\testplatform) 
+2020-04-17 09:57:30.749 [INFO] [restartedMain] [com.miracle.TestplatformApplication-651] - No active profile set, falling back to default profiles: default 
+2020-04-17 09:57:30.974 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer-92] - Tomcat initialized with port(s): 8080 (http) 
+2020-04-17 09:57:30.975 [INFO] [restartedMain] [org.apache.catalina.core.StandardService-173] - Starting service [Tomcat] 
+2020-04-17 09:57:30.976 [INFO] [restartedMain] [org.apache.catalina.core.StandardEngine-173] - Starting Servlet engine: [Apache Tomcat/9.0.33] 
+2020-04-17 09:57:30.993 [INFO] [restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-173] - Initializing Spring embedded WebApplicationContext 
+2020-04-17 09:57:30.993 [INFO] [restartedMain] [org.springframework.web.context.ContextLoader-284] - Root WebApplicationContext: initialization completed in 242 ms 
+2020-04-17 09:57:31.109 [INFO] [restartedMain] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor-181] - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-04-17 09:57:31.166 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer-58] - LiveReload server is running on port 35729 
+2020-04-17 09:57:31.188 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer-204] - Tomcat started on port(s): 8080 (http) with context path '' 
+2020-04-17 09:57:31.189 [INFO] [restartedMain] [com.miracle.TestplatformApplication-61] - Started TestplatformApplication in 0.463 seconds (JVM running for 671.312) 
+2020-04-17 09:57:31.191 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener-63] - Condition evaluation unchanged 
+2020-04-17 09:57:56.628 [INFO] [Thread-28] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor-218] - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-04-17 09:57:56.867 [INFO] [restartedMain] [com.miracle.TestplatformApplication-55] - Starting TestplatformApplication on PC-20190107VPUU with PID 9100 (E:\Code\testplatform\target\classes started by Administrator in E:\Code\testplatform) 
+2020-04-17 09:57:56.867 [INFO] [restartedMain] [com.miracle.TestplatformApplication-651] - No active profile set, falling back to default profiles: default 
+2020-04-17 09:57:57.107 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer-92] - Tomcat initialized with port(s): 8080 (http) 
+2020-04-17 09:57:57.108 [INFO] [restartedMain] [org.apache.catalina.core.StandardService-173] - Starting service [Tomcat] 
+2020-04-17 09:57:57.108 [INFO] [restartedMain] [org.apache.catalina.core.StandardEngine-173] - Starting Servlet engine: [Apache Tomcat/9.0.33] 
+2020-04-17 09:57:57.122 [INFO] [restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-173] - Initializing Spring embedded WebApplicationContext 
+2020-04-17 09:57:57.122 [INFO] [restartedMain] [org.springframework.web.context.ContextLoader-284] - Root WebApplicationContext: initialization completed in 253 ms 
+2020-04-17 09:57:57.228 [INFO] [restartedMain] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor-181] - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-04-17 09:57:57.281 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer-58] - LiveReload server is running on port 35729 
+2020-04-17 09:57:57.299 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer-204] - Tomcat started on port(s): 8080 (http) with context path '' 
+2020-04-17 09:57:57.300 [INFO] [restartedMain] [com.miracle.TestplatformApplication-61] - Started TestplatformApplication in 0.456 seconds (JVM running for 697.422) 
+2020-04-17 09:57:57.302 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener-63] - Condition evaluation unchanged 
+2020-04-17 09:58:14.720 [INFO] [Thread-33] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor-218] - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-04-17 09:58:14.867 [INFO] [restartedMain] [com.miracle.TestplatformApplication.55] - Starting TestplatformApplication on PC-20190107VPUU with PID 9100 (E:\Code\testplatform\target\classes started by Administrator in E:\Code\testplatform) 
+2020-04-17 09:58:14.868 [INFO] [restartedMain] [com.miracle.TestplatformApplication.651] - No active profile set, falling back to default profiles: default 
+2020-04-17 09:58:15.098 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.92] - Tomcat initialized with port(s): 8080 (http) 
+2020-04-17 09:58:15.099 [INFO] [restartedMain] [org.apache.catalina.core.StandardService.173] - Starting service [Tomcat] 
+2020-04-17 09:58:15.099 [INFO] [restartedMain] [org.apache.catalina.core.StandardEngine.173] - Starting Servlet engine: [Apache Tomcat/9.0.33] 
+2020-04-17 09:58:15.114 [INFO] [restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].173] - Initializing Spring embedded WebApplicationContext 
+2020-04-17 09:58:15.114 [INFO] [restartedMain] [org.springframework.web.context.ContextLoader.284] - Root WebApplicationContext: initialization completed in 243 ms 
+2020-04-17 09:58:15.209 [INFO] [restartedMain] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.181] - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-04-17 09:58:15.254 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.58] - LiveReload server is running on port 35729 
+2020-04-17 09:58:15.271 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.204] - Tomcat started on port(s): 8080 (http) with context path '' 
+2020-04-17 09:58:15.271 [INFO] [restartedMain] [com.miracle.TestplatformApplication.61] - Started TestplatformApplication in 0.428 seconds (JVM running for 715.393) 
+2020-04-17 09:58:15.272 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener.63] - Condition evaluation unchanged 
+2020-04-17 10:00:02.654 [INFO] [restartedMain] [com.miracle.TestplatformApplication.java:55] - Starting TestplatformApplication on PC-20190107VPUU with PID 688 (E:\Code\testplatform\target\classes started by Administrator in E:\Code\testplatform) 
+2020-04-17 10:00:02.659 [INFO] [restartedMain] [com.miracle.TestplatformApplication.java:651] - No active profile set, falling back to default profiles: default 
+2020-04-17 10:00:02.723 [INFO] [restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.java:225] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2020-04-17 10:00:02.724 [INFO] [restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor.java:225] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2020-04-17 10:00:03.907 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.java:92] - Tomcat initialized with port(s): 8080 (http) 
+2020-04-17 10:00:03.916 [INFO] [restartedMain] [org.apache.catalina.core.StandardService.java:173] - Starting service [Tomcat] 
+2020-04-17 10:00:03.917 [INFO] [restartedMain] [org.apache.catalina.core.StandardEngine.java:173] - Starting Servlet engine: [Apache Tomcat/9.0.33] 
+2020-04-17 10:00:04.003 [INFO] [restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].java:173] - Initializing Spring embedded WebApplicationContext 
+2020-04-17 10:00:04.004 [INFO] [restartedMain] [org.springframework.web.context.ContextLoader.java:284] - Root WebApplicationContext: initialization completed in 1280 ms 
+2020-04-17 10:00:04.501 [INFO] [restartedMain] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.java:181] - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-04-17 10:00:04.794 [INFO] [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer.java:58] - LiveReload server is running on port 35729 
+2020-04-17 10:00:04.844 [INFO] [restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.java:204] - Tomcat started on port(s): 8080 (http) with context path '' 
+2020-04-17 10:00:04.848 [INFO] [restartedMain] [com.miracle.TestplatformApplication.java:61] - Started TestplatformApplication in 2.586 seconds (JVM running for 3.214) 
+2020-04-17 10:00:11.525 [INFO] [http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020-04-17 10:00:11.526 [INFO] [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet.java:525] - Initializing Servlet 'dispatcherServlet' 
+2020-04-17 10:00:11.532 [INFO] [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet.java:547] - Completed initialization in 6 ms 
+2020-04-17 10:00:11.539 [INFO] [http-nio-8080-exec-1] [com.miracle.filter.WebConfiguration.java:52] - 请求URL:/test/getTestById 
