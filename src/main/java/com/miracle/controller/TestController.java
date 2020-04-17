@@ -1,6 +1,9 @@
 package com.miracle.controller;
 
+import com.miracle.bean.Customer;
+import com.miracle.bean.Order;
 import com.miracle.bean.Test;
+import com.miracle.service.CustomerService;
 import com.miracle.service.TestService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +29,8 @@ public class TestController {
 
     @Autowired
     TestService testService;
+    @Autowired
+    CustomerService customerService;
 
     @RequestMapping(value = "/getTest",method = RequestMethod.GET)
     public Test getTest(){
@@ -59,5 +64,15 @@ public class TestController {
     @RequestMapping(value = "/addTest",method = RequestMethod.POST)
     public void addTest(@RequestBody Test test){
         logger.info(test.getName()+"-"+test.toString());
+    }
+
+    @RequestMapping(value = "/getOrdersByCId",method = RequestMethod.GET)
+    public Customer getOrdersByCId(int id){
+        return customerService.getOrdersByCId(id);
+    }
+
+    @RequestMapping(value = "/getAllCustomer",method = RequestMethod.GET)
+    public List<Customer> getAllCustomer(){
+        return customerService.getAllCustomer();
     }
 }
