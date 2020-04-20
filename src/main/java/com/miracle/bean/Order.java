@@ -8,7 +8,7 @@ package com.miracle.bean;
  */
 public class Order {
     private int id;
-    private int cid;
+    private Customer customer;
     private int price;
 
     public int getId() {
@@ -19,12 +19,12 @@ public class Order {
         this.id = id;
     }
 
-    public int getCid() {
-        return cid;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCid(int cid) {
-        this.cid = cid;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public int getPrice() {

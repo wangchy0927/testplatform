@@ -4,7 +4,9 @@ import com.miracle.bean.Customer;
 import com.miracle.bean.Order;
 import com.miracle.bean.Test;
 import com.miracle.service.CustomerService;
+import com.miracle.service.OrderService;
 import com.miracle.service.TestService;
+import com.sun.org.apache.xpath.internal.operations.Or;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,8 @@ public class TestController {
     TestService testService;
     @Autowired
     CustomerService customerService;
+    @Autowired
+    OrderService orderService;
 
     @RequestMapping(value = "/getTest",method = RequestMethod.GET)
     public Test getTest(){
@@ -71,5 +75,20 @@ public class TestController {
     @RequestMapping(value = "/getAllCustomer",method = RequestMethod.GET)
     public List<Customer> getAllCustomer(){
         return customerService.getAllCustomer();
+    }
+
+    @RequestMapping(value = "/getOrderByOId/{id}",method = RequestMethod.GET)
+    public Order getOrderByOId(@PathVariable("id") int id){
+        return orderService.getOrderByOId(id);
+    }
+
+    @RequestMapping(value = "/getAllOrders",method = RequestMethod.GET)
+    public List<Order> getAllOrder(){
+        return orderService.getAllOrders();
+    }
+
+    @RequestMapping(value = "insertOrder",method = RequestMethod.POST)
+    public void insertOrder(@RequestBody Order order){
+        orderService.insertOrder(order);
     }
 }

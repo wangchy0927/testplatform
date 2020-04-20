@@ -11,17 +11,16 @@
         <collection property="orderList" ofType="Order">
             <id column="oid" property="id" javaType="java.lang.Integer" />
             <result column="price" property="price" javaType="java.lang.Integer" />
-            <result column="cid" property="cid" javaType="java.lang.Integer" />
         </collection>
     </resultMap>
 
 
     <select id="getOrdersByCId" parameterType="int" resultMap="getOrdersByCId">
-        SELECT c.id id,c.`name` name,c.age age ,o.id oid,o.cid cid,o.price price from customer c LEFT JOIN `order` o on c.id = o.cid where cid = #{id}
+        SELECT c.id id,c.`name` name,c.age age ,o.id oid,o.price price from customer c LEFT JOIN `order` o on c.id = o.cid where cid = #{id}
     </select>
 
     <select id="getAllCustomer" parameterType="int" resultMap="getOrdersByCId">
-        SELECT c.id id,c.`name` name,c.age age ,o.id oid,o.cid cid,o.price price from customer c LEFT JOIN `order` o on c.id = o.cid
+        SELECT c.id id,c.`name` name,c.age age ,o.id oid,o.price price from customer c LEFT JOIN `order` o on c.id = o.cid
     </select>
 
 </mapper>
