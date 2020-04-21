@@ -6,7 +6,10 @@ import com.miracle.bean.Test;
 import com.miracle.service.CustomerService;
 import com.miracle.service.OrderService;
 import com.miracle.service.TestService;
-import com.sun.org.apache.xpath.internal.operations.Or;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.*;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,52 +45,93 @@ public class TestController {
         return test;
     }
 
-    @RequestMapping(value = "/getAllTest",method = RequestMethod.GET)
+    @RequestMapping(value = "/loginError",method = RequestMethod.GET)
+    public String loginError(){
+        return "权限验证失败的页面";
+    }
+    @RequestMapping(value = "/loginSuc",method = RequestMethod.GET)
+    public String loginSuc(){
+        return "恭喜登陆成功";
+    }
+
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
+    public String login(){
+        return "请登录";
+    }
+
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    public String login(@RequestParam("username") String username, @RequestParam("password") String password){
+        Subject subject = SecurityUtils.getSubject();
+        // 在认证提交前准备 token（令牌）
+        UsernamePasswordToken token = new UsernamePasswordToken(username, password);
+        // 执行认证登陆
+        try {
+            subject.login(token);
+        } catch (UnknownAccountException uae) {
+            return "未知账户";
+        } catch (IncorrectCredentialsException ice) {
+            return "密码不正确";
+        } catch (LockedAccountException lae) {
+            return "账户已锁定";
+        } catch (ExcessiveAttemptsException eae) {
+            return "用户名或密码错误次数过多";
+        } catch (AuthenticationException ae) {
+            return "用户名或密码不正确！";
+        }
+        if (subject.isAuthenticated()) {
+            return "登录成功";
+        } else {
+            token.clear();
+            return "登录失败";
+        }
+    }
+
+    @RequestMapping(value = "/test/getAllTest",method = RequestMethod.GET)
     public List<Test> getAllTest(){
         return testService.getAllTest();
     }
 
-    @RequestMapping(value = "/getTestById",method = RequestMethod.GET)
+    @RequestMapping(value = "/test/getTestById",method = RequestMethod.GET)
     public Test getTestById(int id){
         return testService.getTestById(id);
     }
 
-    @RequestMapping(value = "/insertTest",method = RequestMethod.POST)
+    @RequestMapping(value = "/test/insertTest",method = RequestMethod.POST)
     public void insertTest(@RequestBody Test test){
         testService.insertTest(test);
     }
 
-    @RequestMapping(value = "/updateTest",method = RequestMethod.POST)
+    @RequestMapping(value = "/test/updateTest",method = RequestMethod.POST)
     public void updateTestById(@RequestBody Test test){
         testService.updateTestById(test);
     }
 
-    @RequestMapping(value = "/addTest",method = RequestMethod.POST)
+    @RequestMapping(value = "/test/addTest",method = RequestMethod.POST)
     public void addTest(@RequestBody Test test){
         logger.info(test.getName()+"-"+test.toString());
     }
 
-    @RequestMapping(value = "/getOrdersByCId/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/order/getOrdersByCId/{id}",method = RequestMethod.GET)
     public Customer getOrdersByCId(@PathVariable("id") int id){
         return customerService.getOrdersByCId(id);
     }
 
-    @RequestMapping(value = "/getAllCustomer",method = RequestMethod.GET)
+    @RequestMapping(value = "/order/getAllCustomer",method = RequestMethod.GET)
     public List<Customer> getAllCustomer(){
         return customerService.getAllCustomer();
     }
 
-    @RequestMapping(value = "/getOrderByOId/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/order/getOrderByOId/{id}",method = RequestMethod.GET)
     public Order getOrderByOId(@PathVariable("id") int id){
         return orderService.getOrderByOId(id);
     }
 
-    @RequestMapping(value = "/getAllOrders",method = RequestMethod.GET)
+    @RequestMapping(value = "/order/getAllOrders",method = RequestMethod.GET)
     public List<Order> getAllOrder(){
         return orderService.getAllOrders();
     }
 
-    @RequestMapping(value = "insertOrder",method = RequestMethod.POST)
+    @RequestMapping(value = "/order/insertOrder",method = RequestMethod.POST)
     public void insertOrder(@RequestBody Order order){
         orderService.insertOrder(order);
     }
