@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.miracle.dao.UserDao" >
+    <select id="getUserInfoByUid" parameterType="int" resultType="User">
+        select id,role,loginName,userName,password,picturePath,createTime,lastTime from `user`
+        where id = #{id}
+    </select>
+    <select id="getAllUsers" resultType="User">
+        select id,role,loginName,userName,password,picturePath,createTime,lastTime from `user`
+    </select>
+    <insert id="addUser" parameterType="User" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        insert into `user` (role,loginName,userName,password,picturePath,createTime,lastTime)
+        values(#{role},#{loginName},#{userName},#{password},#{picturePath},#{createTime},#{lastTime})
+    </insert>
+    <update id="updateUser" parameterType="User" >
+        update `user` set role=#{role},userName=#{userName},lastTime=#{lastTime},picturePath=#{picturePath}
+        where id=#{id}
+    </update>
+    <delete id="delUserByUid" parameterType="int">
+        delete from `user` where id = #{id}
+    </delete>
+    <update id="updateUserPwd" parameterType="User">
+        update `user` set password = #{password} where id = #{id}
+    </update>
+    <select id="getUserListByName"  resultType="User">
+        select id,role,loginName,userName,password,picturePath,createTime,lastTime from `user` where
+        loginName like '%${name}%' or userName like '%${name}%'
+    </select>
+</mapper>

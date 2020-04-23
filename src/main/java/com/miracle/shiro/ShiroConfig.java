@@ -29,11 +29,13 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setSuccessUrl("/test/loginSuc");
         shiroFilterFactoryBean.setUnauthorizedUrl("/test/loginError");
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
+        //暂时先不需要身份验证
+        filterChainDefinitionMap.put("/**", "anon");
 
         // <!-- authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问-->
         filterChainDefinitionMap.put("/test/test/**", "anon");
-
         filterChainDefinitionMap.put("/test/order/**", "authc");
+
         //主要这行代码必须放在所有权限设置的最后，不然会导致所有 url 都被拦截 剩余的都需要认证
         filterChainDefinitionMap.put("/test/**", "authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
