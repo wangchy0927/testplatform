@@ -22,6 +22,6 @@ public interface ProductDao {
     Product getProductById(int id);
     List<Product> getAllProduct();
     List<String> getVersionsByPName(String name);
-    List<User> getUsersByPName(String  name);
+    List<User> getUsersByPName(String name);
     List<Product> getProductsByName(String name);
 }

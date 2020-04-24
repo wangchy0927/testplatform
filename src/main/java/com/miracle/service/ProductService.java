@@ -31,12 +31,12 @@ public class ProductService {
             return new Result(-1,"存在名字"+name+"的产品，操作失败");
         }
         int code = productDao.addProduct(product);
-        return new Result(code,code>0?"添加产品成功":"添加产品失败");
+        return new Result(code,code>0?"操作成功":"操作失败");
     }
     public Result delProduct(int id){
         logger.info("删除产品id={}",id);
         int code = productDao.delProduct(id);
-        return new Result(code,code>0?"删除成功":"删除失败");
+        return new Result(code,code>0?"操作成功":"操作失败");
     }
 
     public Result updateProduct(Product product){
@@ -46,7 +46,7 @@ public class ProductService {
             return new Result(-1,"存在名字"+name+"的产品，操作失败");
         }
         int code = productDao.updateProduct(product);
-        return new Result(code,code>0?"更新成功":"更新失败");
+        return new Result(code,code>0?"操作成功":"操作失败");
     }
 
     public Result getProductById(int id){

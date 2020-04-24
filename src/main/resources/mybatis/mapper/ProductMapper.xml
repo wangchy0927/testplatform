@@ -23,10 +23,11 @@
     <select id="getVersionsByPName" parameterType="String" resultType="String">
         select t.version from product t where t.productName = #{name}
     </select>
-    <select id="getUsersByPName">
-
+    <select id="getUsersByPName" resultType="User">
+        select userID id,userName loginName from user_product up where productName = #{id}
     </select>
     <select id="getProductsByName" parameterType="String" resultType="Product">
         select id,productName,version,createTime from `product` where productName = #{name}
     </select>
+
 </mapper>

@@ -65,4 +65,9 @@ public class UserController {
     public Result addProductsToUser(@RequestBody User user){
         return userService.addProductsToUser(user);
     }
+
+    @RequestMapping(value = "/getUserProducts/{id}",method = RequestMethod.GET)
+    public Result getUserProducts(@PathVariable("id") int id){
+        return userService.getUserProducts(id);
+    }
 }

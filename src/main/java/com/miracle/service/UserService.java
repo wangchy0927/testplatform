@@ -69,4 +69,10 @@ public class UserService {
         int code = userDao.addProductsToUser(user);
         return new Result(code,code>0?"操作成功":"操作失败");
     }
+
+    public Result getUserProducts(int id){
+        logger.info("获取用户id={}名下的产品",id);
+        User user = userDao.getUserProducts(id);
+        return new Result(1,user);
+    }
 }

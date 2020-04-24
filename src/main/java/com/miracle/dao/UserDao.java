@@ -23,4 +23,5 @@ public interface UserDao {
     List<User> getUserListByName(String name);
     int updateUserPwd(User user);
     int addProductsToUser(User user);
+    User getUserProducts(int id);
 }

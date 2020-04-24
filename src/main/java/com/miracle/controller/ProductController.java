@@ -49,6 +49,11 @@ public class ProductController {
         return productService.getVersionsByPName(name);
     }
 
+    @RequestMapping(value = "/getUsersByPName/{name}",method = RequestMethod.GET)
+    public Result getUsersByPName(@PathVariable("name") String name){
+        return productService.getUsersByPName(name);
+    }
+
     @RequestMapping(value = "/addVersion",method = RequestMethod.POST)
     public Result addVersion(@RequestBody Product product){
         return productService.addVersion(product);

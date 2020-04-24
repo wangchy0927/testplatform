@@ -34,4 +34,17 @@
             (#{id},#{loginName}, #{product.id},#{product.productName})
         </foreach>
     </insert>
+    <select id="getUserProducts" parameterType="int" resultMap="selectUserProducts">
+        SELECT userID,userName,productID,productName from user_product where userID= #{id}
+    </select>
+
+    <resultMap id="selectUserProducts" type="User">
+        <result column="userID" property="id"/>
+        <result column="userName" property="userName"/>
+        <collection property="productList" ofType="Product">
+            <result column="productID" property="id"/>
+            <result column="productName" property="productName"/>
+        </collection>
+    </resultMap>
+
 </mapper>
