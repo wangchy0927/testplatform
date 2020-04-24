@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.miracle.dao.ProductDao" >
+
+   <insert id="addProduct" parameterType="Product" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+       insert into `product`(productName,version,createTime) values (#{productName},#{version},#{createTime})
+   </insert>
+    <delete id="delProduct" parameterType="int">
+        delete from `product` where id = #{id}
+    </delete>
+    <update id="updateProduct" parameterType="Product">
+        update `product` set productName = #{productName} where productName in
+        (select productName from (select productName from `product` where id = #{id}) p )
+    </update>
+    <select id="getProductById" parameterType="int" resultType="Product">
+        select id,productName,version,createTime from `product` where id = #{id}
+    </select>
+    <select id="getAllProduct" resultType="Product">
+       select id,productName,version,createTime from `product`
+    </select>
+    <select id="getVersionsByPName" parameterType="String" resultType="String">
+        select t.version from product t where t.productName = #{name}
+    </select>
+    <select id="getUsersByPName">
+
+    </select>
+    <select id="getProductsByName" parameterType="String" resultType="Product">
+        select id,productName,version,createTime from `product` where productName = #{name}
+    </select>
+</mapper>

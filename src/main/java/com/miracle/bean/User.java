@@ -1,6 +1,8 @@
 package com.miracle.bean;
 
 
+import java.util.List;
+
 /**
  * 功能描述：
  *
@@ -18,6 +20,8 @@ public class User {
     private String createTime;
     //用户最后登陆时间
     private String lastTime;
+    private List<Product> productList;
+
 
     public int getId() {
         return id;
@@ -81,6 +85,14 @@ public class User {
 
     public void setLastTime(String lastTime) {
         this.lastTime = lastTime;
+    }
+
+    public List<Product> getProductList() {
+        return productList;
+    }
+
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
     }
 
     @Override

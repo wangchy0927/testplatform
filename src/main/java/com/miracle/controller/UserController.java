@@ -1,5 +1,6 @@
 package com.miracle.controller;
 
+import com.miracle.bean.Result;
 import com.miracle.bean.User;
 import com.miracle.service.UserService;
 import com.miracle.util.JsonUtil;
@@ -26,78 +27,42 @@ public class UserController {
     UserService userService;
 
     @RequestMapping(value = "/addUser",method = RequestMethod.POST)
-    public void addUser(@RequestBody User user){
-        int result = userService.addUser(user);
-        if(result>0){
-            logger.info("新增用户成功{}",user.toString());
-        }else{
-            logger.error("新泽用户失败");
-        }
-
+    public Result addUser(@RequestBody User user){
+        return userService.addUser(user);
     }
 
     @RequestMapping(value = "/delUserByUid/{id}",method = RequestMethod.POST)
-    public void delUserByUid(@PathVariable("id") int id){
-        logger.info("删除用户uid={}",id);
-        User user = getUserInfoByUid(id);
-        if(user!=null){
-            userService.delUserByUid(id);
-        }else {
-            logger.error("用户id:{}不存在",id);
-        }
+    public Result delUserByUid(@PathVariable("id") int id){
+        return userService.delUserByUid(id);
     }
 
     @RequestMapping(value = "/updateUser",method = RequestMethod.POST)
-    public User updateUser(@RequestBody User user){
-        int id = userService.updateUser(user);
-        if(id>=1){
-            logger.info("更新用户成功-{}",user.toString());
-            return user;
-        }else{
-            logger.error("更新用户失败");
-            return null;
-        }
+    public Result updateUser(@RequestBody User user){
+       return userService.updateUser(user);
     }
+
     @RequestMapping(value = "/updateUserPwd",method = RequestMethod.POST)
-    public User updateUserPwd(@RequestBody User user){
-        int id = userService.updateUserPwd(user);
-        if(id>=1){
-            logger.info("更新用户密码成功-{}",user.toString());
-            return user;
-        }else{
-            logger.error("更新用户密码失败");
-            return null;
-        }
+    public Result updateUserPwd(@RequestBody User user){
+        return userService.updateUserPwd(user);
     }
 
     @RequestMapping(value = "/getUserInfoByUid/{uid}",method = RequestMethod.GET)
-    public User getUserInfoByUid(@PathVariable("uid") int uid){
-        User user = userService.getUserInfoByUid(uid);
-        if(user!=null){
-            logger.info("根据用户id:{}获取用户信息{}",uid,user.toString());
-            return user;
-        }else{
-            return null;
-        }
+    public Result getUserInfoByUid(@PathVariable("uid") int uid){
+        return userService.getUserInfoByUid(uid);
     }
 
     @RequestMapping(value = "/getAllUsers",method = RequestMethod.GET)
-    public Map getAllUsers(){
-        List<User> userList = userService.getAllUsers();
-        logger.info("查询所有用户{}",userList);
-        Map<Object,Object> map = new HashMap<Object,Object>();
-        map.put("size",userList.size());
-        map.put("userList",userList);
-        return map;
+    public Result getAllUsers(){
+        return userService.getAllUsers();
     }
 
     @RequestMapping(value = "/getUserListByName/{name}",method = RequestMethod.GET)
-    public Map getUserListByName(@PathVariable("name") String name){
-        List<User> userList = userService.getUserListByName(name);
-        logger.info("根据用户名:{},查询所有用户{}",name,userList);
-        Map<Object,Object> map = new HashMap<Object,Object>();
-        map.put("size",userList.size());
-        map.put("userList",userList);
-        return map;
+    public Result getUserListByName(@PathVariable("name") String name){
+        return userService.getUserListByName(name);
+    }
+
+    @RequestMapping(value = "/addProductsToUser",method = RequestMethod.POST)
+    public Result addProductsToUser(@RequestBody User user){
+        return userService.addProductsToUser(user);
     }
 }

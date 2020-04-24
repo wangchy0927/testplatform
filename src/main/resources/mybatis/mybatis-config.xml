@@ -7,9 +7,12 @@
         <package name="com.miracle.bean"/>
     </typeAliases>
     <mappers>
+        <!-- 测试用的 -->
         <mapper resource="mybatis/mapper/TestMapper.xml"/>
         <mapper resource="mybatis/mapper/CustomerMapper.xml"/>
         <mapper resource="mybatis/mapper/OrderMapper.xml"/>
+        <!-- 测试平台 -->
         <mapper resource="mybatis/mapper/UserMapper.xml"/>
+        <mapper resource="mybatis/mapper/ProductMapper.xml"/>
     </mappers>
 </configuration>

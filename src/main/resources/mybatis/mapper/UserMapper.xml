@@ -15,7 +15,7 @@
         values(#{role},#{loginName},#{userName},#{password},#{picturePath},#{createTime},#{lastTime})
     </insert>
     <update id="updateUser" parameterType="User" >
-        update `user` set role=#{role},userName=#{userName},lastTime=#{lastTime},picturePath=#{picturePath}
+        update `user` set role=#{role},userName=#{userName},picturePath=#{picturePath}
         where id=#{id}
     </update>
     <delete id="delUserByUid" parameterType="int">
@@ -28,4 +28,10 @@
         select id,role,loginName,userName,password,picturePath,createTime,lastTime from `user` where
         loginName like '%${name}%' or userName like '%${name}%'
     </select>
+    <insert id="addProductsToUser" parameterType="User">
+        insert into `user_product` (userID,userName,productID,productName) values
+        <foreach item="product" collection="productList" separator=",">
+            (#{id},#{loginName}, #{product.id},#{product.productName})
+        </foreach>
+    </insert>
 </mapper>

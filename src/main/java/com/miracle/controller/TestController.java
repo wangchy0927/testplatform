@@ -1,8 +1,6 @@
 package com.miracle.controller;
 
-import com.miracle.bean.Customer;
-import com.miracle.bean.Order;
-import com.miracle.bean.Test;
+import com.miracle.bean.*;
 import com.miracle.service.CustomerService;
 import com.miracle.service.OrderService;
 import com.miracle.service.TestService;
@@ -15,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -134,5 +133,22 @@ public class TestController {
     @RequestMapping(value = "/order/insertOrder",method = RequestMethod.POST)
     public void insertOrder(@RequestBody Order order){
         orderService.insertOrder(order);
+    }
+
+    @RequestMapping(value = "/userProducts",method = RequestMethod.GET)
+    public User test(){
+        User user = new User();
+        user.setId(1);
+        user.setLoginName("miracle");
+        Product p = new Product();
+        p.setId(1);
+        p.setProductName("11");
+        Product p2 = new Product();
+        p2.setId(2);
+        p2.setProductName("22");
+        List<Product> productList = new ArrayList<Product>();
+        productList.add(p);productList.add(p2);
+        user.setProductList(productList);
+        return user;
     }
 }
