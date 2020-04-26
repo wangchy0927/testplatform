@@ -14,11 +14,6 @@ import java.util.Map;
  */
 public class JsonUtil {
 
-    public static String getJsonByObjList(List list){
-        Map<Object,Object> map = new HashMap<Object,Object>();
-        map.put("num",list.size());
-        map.put("objList",list);
-        return JSON.toJSONString(map);
-    }
+
 
 }

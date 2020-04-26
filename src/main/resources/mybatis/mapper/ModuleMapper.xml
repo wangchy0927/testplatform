@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.miracle.manage.dao.ModuleDao" >
+
+   <insert id="addModule" parameterType="Module" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+       insert into `product_module`(`name`,productID,productName) values (#{name},#{product.id},#{product.productName})
+   </insert>
+    <delete id="delModule" parameterType="int">
+        delete from `product_module` where id = #{id}
+    </delete>
+    <update id="updateModule" parameterType="Module">
+        update `product_module` set `name` = #{name} where id = #{id}
+    </update>
+
+    <select id="getModuleListByPId" parameterType="int" resultType="Module">
+        select id,`name` from `product_module` where productID = #{product.productID}
+    </select>
+
+    <select id="getModuleListByPName" parameterType="String" resultType="Module">
+        select id,`name` from `product_module` where productName = #{product.productName}
+    </select>
+
+</mapper>

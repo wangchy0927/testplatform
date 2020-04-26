@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.miracle.dao.ProductDao" >
+<mapper namespace="com.miracle.manage.dao.ProductDao" >
 
    <insert id="addProduct" parameterType="Product" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
        insert into `product`(productName,version,createTime) values (#{productName},#{version},#{createTime})

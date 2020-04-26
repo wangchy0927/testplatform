@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <package name="com.miracle.bean"/>
+        <package name="com.miracle.manage.bean"/>
     </typeAliases>
     <mappers>
         <!-- 测试用的 -->
@@ -14,5 +14,6 @@
         <!-- 测试平台 -->
         <mapper resource="mybatis/mapper/UserMapper.xml"/>
         <mapper resource="mybatis/mapper/ProductMapper.xml"/>
+        <mapper resource="mybatis/mapper/ModuleMapper.xml"/>
     </mappers>
 </configuration>

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.miracle.dao.OrderDao" >
+<mapper namespace="com.miracle.manage.dao.OrderDao" >
 
     <resultMap id="getOrder" type="Order" >
         <id column="oid" property="id" javaType="java.lang.Integer" />

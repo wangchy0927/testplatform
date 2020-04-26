@@ -24,12 +24,12 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .pathMapping("/")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.miracle.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.miracle.manage.controller"))
                 .paths(PathSelectors.any())
                 .build().apiInfo(new ApiInfoBuilder()
-                        .title("testplatform平台API文档")
+                        .title("testplatform接口文档")
                         .version("1.0")
-                        .contact(new Contact("Miracle","www.wangerbao.com","wangchy0927@sina.com"))
+                        .contact(new Contact("Miracle","http://www.wangerbao.com","wangchy0927@sina.com"))
                         .build());
     }
 }

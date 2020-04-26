@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.miracle.dao.UserDao" >
+<mapper namespace="com.miracle.manage.dao.UserDao" >
     <select id="getUserInfoByUid" parameterType="int" resultType="User">
         select id,role,loginName,userName,password,picturePath,createTime,lastTime from `user`
         where id = #{id}
