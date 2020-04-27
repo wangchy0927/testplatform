@@ -24,4 +24,5 @@ public interface UserDao {
     int updateUserPwd(User user);
     int addProductsToUser(User user);
     User getUserProducts(int id);
+    User getUserByLoginName(String loginName);
 }

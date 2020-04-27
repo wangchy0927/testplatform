@@ -79,4 +79,10 @@ public class UserService {
         User user = userDao.getUserProducts(id);
         return new Result(1,user);
     }
+
+    public Result getUserByLoginName(String loginName){
+        logger.info("根据登陆名={}查询用户信息",loginName);
+        User user = userDao.getUserByLoginName(loginName);
+        return new Result(1,user);
+    }
 }

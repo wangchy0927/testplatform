@@ -65,4 +65,9 @@ public class UserController {
     public Result getUserProducts(@PathVariable("id") int id){
         return userService.getUserProducts(id);
     }
+
+    @RequestMapping(value = "/getUserByLoginName/{loginName}",method = RequestMethod.GET)
+    public Result getUserByLoginName(@PathVariable("loginName") String loginName){
+        return userService.getUserByLoginName(loginName);
+    }
 }

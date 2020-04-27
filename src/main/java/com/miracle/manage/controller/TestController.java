@@ -10,6 +10,7 @@ import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -21,8 +22,9 @@ import java.util.List;
  * @Author: Miracle
  * @Date: 2020/4/16 17:09
  */
-@RestController
+
 @RequestMapping("/test")
+@RestController
 public class TestController {
 
     Logger logger = LoggerFactory.getLogger(TestController.class);
@@ -34,6 +36,9 @@ public class TestController {
     @Autowired
     OrderService orderService;
 
+
+
+
     @RequestMapping(value = "/getTest",method = RequestMethod.GET)
     public Test getTest(){
         Test test = new Test();
@@ -43,10 +48,12 @@ public class TestController {
         return test;
     }
 
-    @RequestMapping(value = "/loginError",method = RequestMethod.GET)
+
+    @RequestMapping(value = "/loginError", method = RequestMethod.GET)
     public String loginError(){
         return "权限验证失败的页面";
     }
+
     @RequestMapping(value = "/loginSuc",method = RequestMethod.GET)
     public String loginSuc(){
         return "恭喜登陆成功";
